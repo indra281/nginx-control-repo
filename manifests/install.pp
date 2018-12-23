@@ -2,7 +2,7 @@ class nginx::install {
 
 package { 'httpd':
 ensure => absent,
-notify => Package['nginx'],
+before => Package['nginx'],
 }
 
 package { ['epel-release', 'nginx']:
