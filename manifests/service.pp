@@ -2,7 +2,7 @@ class nginx::service inherits nginx {
 
 service { 'nginx':
 
-ensure => running,
+ensure => $::nginx::service_status,
 enable => true,
 }
 
