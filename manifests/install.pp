@@ -5,7 +5,7 @@ ensure => absent,
 before => Package['nginx'],
 }
 
-package { ['epel-release', 'nginx':
+package { ['epel-release', 'nginx']:
 
 ensure => installed,
 
