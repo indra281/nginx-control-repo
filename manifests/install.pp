@@ -5,7 +5,7 @@ ensure => absent,
 #before => Package['nginx'],
 }
 
-package { $::nginx::package:
+package { ['epel-release', 'nginx':
 
 ensure => installed,
 after => Package['httpd'],

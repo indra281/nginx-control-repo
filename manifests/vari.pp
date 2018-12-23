@@ -1,10 +1,10 @@
 class nginx::vari {
 
 $user = 'root'
-$config_path = '/usr/share/nginx/html/index.html'
+$config_path = '/usr/share/nginx/html/index1.html'
 $service_status = 'running'
 $mode = '0777'
-$package = ['epel-release', 'nginx']
+$packages = ['epel-release', 'nginx']
 
 
 }
