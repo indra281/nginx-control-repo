@@ -2,13 +2,13 @@ class nginx::install {
 
 package { 'httpd':
 ensure => absent,
-before => Package['nginx'],
+#before => Package['nginx'],
 }
 
 package { ['epel-release', 'nginx']:
 
 ensure => installed,
-#require => Package['httpd'],
+after => Package['httpd'],
 }
 
 
