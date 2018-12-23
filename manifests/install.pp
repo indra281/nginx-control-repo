@@ -2,13 +2,13 @@ class nginx::install inherits nginx {
 
 package { 'httpd':
 ensure => absent,
-#before => Package['nginx'],
+before => Package['nginx'],
 }
 
 package { ['epel-release', 'nginx':
 
 ensure => installed,
-after => Package['httpd'],
+
 }
 
 
